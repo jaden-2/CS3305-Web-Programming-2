@@ -8,6 +8,7 @@ function  calculateTotal($quantity, $price ): float
     return $quantity * $price * (1 + $tax);
 }
 
+echo "$".calculateTotal(10, 1e3)."\n";
 // B
 function formalProduct($name): string{
     $name = ucfirst(trim($name));
@@ -16,11 +17,13 @@ function formalProduct($name): string{
     }
     return $name;
 }
+
+echo formalProduct("Billy Jeans")."\n";
 // C
 function calculateDiscount($price, $discount): float{
     return $price * (1 - $discount/100);
 }
-
+echo "$".calculateDiscount(1e5, 20)."\n";
 
 // Question 2
 // A
