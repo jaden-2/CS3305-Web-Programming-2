@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unit 4 CS 3304 Assignment</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 45%;
+            height: 40%;
+
+        }
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            justify-content: space-between;
+            height: 100%;
+            border-radius: 10px;
+            background-color: #1234;
+        }
+        input{
+            border: none;
+            border-radius: 10px;
+            height: 40%;
+        }
+        label{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="unit%204.php?page=home" >Home Page |</a>
+    <a href="unit%204.php?page=about">About Page |</a>
+    <a href="unit%204.php?page=contact">Contact Us</a>
+</nav>
+<form method="POST" action="unit%204.php">
+    <fieldset>
+        <legend>Sign up</legend>
+        <input type="text" name="username" id="username" placeholder="Enter your username" required>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+        <input type="password" name="re-password" id="re-password" placeholder="Re-enter your password" required>
+        <input type="submit" value="Sign up">
+        <span><?php use JetBrains\PhpStorm\NoReturn;
+
+                echo $message ?? null?></span>
+    </fieldset>
+</form>
+</body>
+</html>
